@@ -1,4 +1,7 @@
+from controller.terminal import Menu
+
 def main():
-    pass
+    menu = Menu()
+    menu.main_menu()
 
 if __name__=="__main__": main()

@@ -1,7 +1,7 @@
-
+import re
 
 class Formatter:
-    
+
     def format_device_scan_response(self, response):
         clients_info = []
         for client in response:
@@ -13,11 +13,15 @@ class Formatter:
         return clients_info
     #TODO methods for all the utils, arp spoofing etc...
 
+formatter = Formatter()
+
 class Viewer:
 
     def view_device_scan_response(self, response):
         for client in response:
-            print(f"\n IP: {client['IP']} \t MAC: {client['MAC']}")
+            print(f"IP: {client['IP']} \t MAC: {client['MAC']}")
+
+viewer = Viewer()
 
 
 class Exporter:
@@ -26,7 +30,13 @@ class Exporter:
         #TODO: Create an exportation to txt or csv..
         pass
 
+exporter = Exporter()
+
+
 class Validator:
-    #TODO: Validate an ip range introduced
-    def validate_ip_range():
-        pass
+
+    def validate_ip_range(self, ip_range):
+        regex = re.compile(r"(?<![-\.\d])(?:0{0,2}?[0-9]\.|1\d?\d?\.|2[0-5]?[0-5]?\.){3}(?:0{0,2}?[0-9]|1\d?\d?|2[0-5]?[0-5]?)(?![\.\d])")
+        return regex.match(ip_range)
+
+validator = Validator()

@@ -1,5 +1,5 @@
 import scapy.all as scapy
-from models.client import Client
+from src.models.client import Client
 
 class Scanner:
 
@@ -21,9 +21,9 @@ class Scanner:
 
 class DeviceScanner(Scanner):
 
-    def __init__(self):
+    def __init__(self, ip_range):
         super().__init__(timeout = 20)
-        self.ip_range = "192.168.1.1/24"
+        self.ip_range = ip_range
         self.mac = "ff:ff:ff:ff:ff:ff"
 
     def scan(self):
@@ -33,8 +33,6 @@ class DeviceScanner(Scanner):
         for sent, received in response:
             clients.append(Client(received.psrc, received.hwsrc))
         return clients
-
-deviceScanner = DeviceScanner()
 
 
 class PortScanner(Scanner):

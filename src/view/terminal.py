@@ -1,4 +1,7 @@
-from src.controller.execution import deviceScannerExecution, portScannerExecution, arpSpoofingExecution
+from src.execution.devicescanner_execution import deviceScannerExecution
+from src.execution.portscanner_execution import portScannerExecution
+from src.execution.arp_spoofer_execution import arpSpoofingExecution
+
 
 class Menu:
 
@@ -21,8 +24,8 @@ class Menu:
     
     def main_menu(self):
         options =  {
-            '1': ('Scan devices on WLAN', deviceScannerExecution.scan_devices),
-            '2': ('Scan ports of an specific device', portScannerExecution.scan_ports),
+            '1': ('Scan devices on WLAN', deviceScannerExecution.scan),
+            '2': ('Scan ports of an specific device', portScannerExecution.scan),
             '3': ('ARP spoofing', arpSpoofingExecution.arp_spoofing),
             '4': ('Salir', self.exit)
         }

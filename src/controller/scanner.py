@@ -67,10 +67,8 @@ class PortScanner(Scanner):
             response = super().send_sr1_packet(packet, self.timeout)
             if response == None:
                 ports.append(Port(port, False))
-                print(f"asdfsadfsadf{port}")
             elif response.haslayer(scapy.TCP) and response.getlayer(scapy.TCP).flags==0x12:
                 ports.append(Port(port, True))
-                print(f"asdfsadfsadf{port}")
         
         return ports
 

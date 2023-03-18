@@ -3,8 +3,7 @@ from src.utils.formatter import formatter
 from src.utils.viewer import viewer
 from src.utils.validator import validator
 
-class Execution:
-    #TODO: Refactor code.
+class Requestor:
     def request_ip_range(self):
         return input("\nEnter an IP range. Example: [192.168.1.1/24]:\t")
 
@@ -16,11 +15,14 @@ class Execution:
     
     def request_end_port(self):
         return input("\nEnter end port:\t")
-    
-class DeviceScannerExecution(Execution):
+
+requestor = Requestor()
+
+
+class DeviceScannerExecution():
     
     def scan_devices(self):
-        ip_range = super().request_ip_range()
+        ip_range = requestor.request_ip_range()
         if validator.valid_ip_range(ip_range) == True:
             deviceScanner = DeviceScanner(ip_range)
             response = deviceScanner.scan()
@@ -32,17 +34,17 @@ class DeviceScannerExecution(Execution):
 deviceScannerExecution = DeviceScannerExecution()
 
 
-class PortScannerExecution(Execution):
+class PortScannerExecution():
 
     #TODO: Improve validations and code quality
     def scan_ports(self):
-        ip = super().request_ip()
+        ip = requestor.request_ip()
         if validator.valid_ip(ip) == True:
-            startport = super().request_start_port()
+            startport = requestor.request_start_port()
             if startport.isnumeric():
                 int_startport = int(startport)
                 if validator.valid_port(int_startport) == True:
-                    endport = super().request_end_port()
+                    endport = requestor.request_end_port()
                     if startport.isnumeric():
                         int_endport = int(endport)
                         if validator.valid_port(int_endport) == True:

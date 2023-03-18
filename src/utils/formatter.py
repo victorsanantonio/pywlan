@@ -23,7 +23,6 @@ class Formatter:
                 "State": {port_state}
             }
             ports_info.append(port_info)
-        print(ports_info)
         return ports_info
     
     #TODO methods for all the utils, arp spoofing etc...

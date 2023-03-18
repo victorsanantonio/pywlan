@@ -22,5 +22,11 @@ class Validator:
             return True
         else:
             return False
+    
+    def startport_less_than_endport(self, startport, endport):
+        if startport <= endport:
+            return True
+        else:
+            return False
 
 validator = Validator()

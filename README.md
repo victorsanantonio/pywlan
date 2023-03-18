@@ -1,2 +1,2 @@
 # wlanvenom
-Python project which has some utils using scapy module.
+Python project which implements some utilities using the scapy module.

@@ -4,7 +4,7 @@ from src.utils.viewer import viewer
 from src.utils.validator import validator
 
 class Execution:
-    
+    #TODO: Refactor code.
     def request_ip_range(self):
         return input("\nEnter an IP range. Example: [192.168.1.1/24]:\t")
 

@@ -1,22 +1,36 @@
 import scapy.all as scapy
 from src.models.client import Client
+from src.models.port import Port
+
 
 class Scanner:
 
     def __init__(self, timeout):
         self.timeout = timeout
 
-    def get_ip(self, ip):
-        return scapy.ARP(pdst=ip)
+    def get_arp(self, value):
+        return scapy.ARP(pdst=value)
 
-    def get_mac(self, mac):
-        return scapy.Ether(dst=mac)
+    def get_ether(self, value):
+        return scapy.Ether(dst=value)
     
-    def create_packet(self, arp, ether):
+    def get_ip(self, value):
+        return scapy.IP(dst=value)
+
+    def get_tcp(self, port, flag):
+        return scapy.TCP(dport=port, flags=flag)
+
+    def create_srp_packet(self, arp, ether):
         return ether / arp
     
-    def send_packet(self, packet, timeout):
+    def create_sr1_packet(self, ip, tcp):
+        return ip / tcp
+
+    def send_srp_packet(self, packet, timeout):
         return scapy.srp(packet, timeout=timeout)[0]
+    
+    def send_sr1_packet(self, packet, timeout):
+        return scapy.sr1(packet, timeout=timeout)
 
 
 class DeviceScanner(Scanner):
@@ -27,8 +41,8 @@ class DeviceScanner(Scanner):
         self.mac = "ff:ff:ff:ff:ff:ff"
 
     def scan(self):
-        packet = super().create_packet(super().get_ip(self.ip_range), super().get_mac(self.mac))
-        response = super().send_packet(packet, self.timeout)
+        packet = super().create_srp_packet(super().get_arp(self.ip_range), super().get_ether(self.mac))
+        response = super().send_srp_packet(packet, self.timeout)
         clients = []
         for sent, received in response:
             clients.append(Client(received.psrc, received.hwsrc))
@@ -36,4 +50,27 @@ class DeviceScanner(Scanner):
 
 
 class PortScanner(Scanner):
-    pass
+
+    def __init__(self, ip, startport, endport):
+        super().__init__(timeout = 0.5)
+        self.ip = ip
+        self.startport = startport
+        self.endport = endport
+    
+    def scan(self):
+        ports = []
+        if self.startport==self.endport:
+            self.endport+=1
+        
+        for port in range(self.startport, self.endport):
+            packet = super().create_sr1_packet(super().get_ip(self.ip), super().get_tcp(port, 'S'))
+            response = super().send_sr1_packet(packet, self.timeout)
+            if response == None:
+                ports.append(Port(port, False))
+                print(f"asdfsadfsadf{port}")
+            elif response.haslayer(scapy.TCP) and response.getlayer(scapy.TCP).flags==0x12:
+                ports.append(Port(port, True))
+                print(f"asdfsadfsadf{port}")
+        
+        return ports
+

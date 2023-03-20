@@ -28,9 +28,7 @@ class PortScannerExecution():
             viewer.view_port_scan_info(info)
 
             export_confirmation = requestor.request_export_confirmation()
-            print(f"si   {export_confirmation}")
             confirmation = validator.valid_confirmation(export_confirmation)
-            print(f"asdfasfsafas   {export_confirmation}")
             exporter.confirm_exportation(info, DATASET_NAME, confirmation)
 
         except Exception as exception:

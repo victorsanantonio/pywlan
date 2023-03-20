@@ -20,7 +20,6 @@ class DeviceScannerExecution():
             viewer.view_device_scan_info(info)
 
             export_confirmation = requestor.request_export_confirmation()
-            print(f"asdfasfsafas{export_confirmation}")
             confirmation = validator.valid_confirmation(export_confirmation)
             exporter.confirm_exportation(info, DATASET_NAME, confirmation)
 

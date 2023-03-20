@@ -27,13 +27,13 @@ class Menu:
             '1': ('Scan devices on WLAN', deviceScannerExecution.scan),
             '2': ('Scan ports of an specific device', portScannerExecution.scan),
             '3': ('ARP spoofing', arpSpoofingExecution.arp_spoofing),
-            '4': ('Salir', self.exit)
+            '4': ('Exit', self.exit)
         }
         self.generate_menu(options, '4')
 
     def get_option(self, options):
         while (a := input('\n\t\tChoose an option: ')) not in options:
-            print("Option non available. Try again")
+            print("Non available option. Try again")
         return a
 
     def show_ascii_word_art(self):

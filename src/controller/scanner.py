@@ -62,7 +62,7 @@ class PortScanner(Scanner):
         if self.startport==self.endport:
             self.endport+=1
         
-        for port in range(self.startport, self.endport):
+        for port in range(self.startport, self.endport+1):
             packet = super().create_sr1_packet(super().get_ip(self.ip), super().get_tcp(port, 'S'))
             response = super().send_sr1_packet(packet, self.timeout)
             if response == None:

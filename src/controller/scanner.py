@@ -23,14 +23,14 @@ class Scanner:
     def create_srp_packet(self, arp, ether):
         return ether / arp
     
-    def create_sr1_packet(self, ip, tcp):
+    def create_srp1_packet(self, ip, tcp):
         return ip / tcp
 
     def send_srp_packet(self, packet, timeout):
         return scapy.srp(packet, timeout=timeout)[0]
     
-    def send_sr1_packet(self, packet, timeout):
-        return scapy.sr1(packet, timeout=timeout)
+    def send_srp1_packet(self, packet, timeout):
+        return scapy.srp1(packet, timeout=timeout)
 
 
 class DeviceScanner(Scanner):
@@ -59,12 +59,9 @@ class PortScanner(Scanner):
     
     def scan(self):
         ports = []
-        if self.startport==self.endport:
-            self.endport+=1
-        
         for port in range(self.startport, self.endport+1):
-            packet = super().create_sr1_packet(super().get_ip(self.ip), super().get_tcp(port, 'S'))
-            response = super().send_sr1_packet(packet, self.timeout)
+            packet = super().create_srp1_packet(super().get_ip(self.ip), super().get_tcp(port, 'S'))
+            response = super().send_srp1_packet(packet, self.timeout)
             if response == None:
                 ports.append(Port(port, False))
             elif response.haslayer(scapy.TCP) and response.getlayer(scapy.TCP).flags==0x12:

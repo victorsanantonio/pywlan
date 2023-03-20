@@ -4,8 +4,8 @@ class Formatter:
         clients_info = []
         for client in response:
             client_info = {
-                "IP": {client.ip},
-                "MAC": {client.mac}
+                "IP": client.ip,
+                "MAC": client.mac
             }
             clients_info.append(client_info)
         return clients_info
@@ -19,8 +19,8 @@ class Formatter:
             else:
                 port_state = "Closed"
             port_info = {
-                "Port": {port.port},
-                "State": {port_state}
+                "Port": port.port,
+                "State": port_state
             }
             ports_info.append(port_info)
         return ports_info

@@ -6,7 +6,7 @@ from src.execution.arp_spoofer_execution import arp_spoofer_execution
 class Menu:
 
     def exit(self):
-        print("Exiting program")
+        print("Goodbye!")
 
     def generate_menu(self, options, exit_option):
         option = None

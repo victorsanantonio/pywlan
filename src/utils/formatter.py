@@ -1,3 +1,5 @@
+
+
 class Formatter:
 
     def format_device_scan_response(self, response):

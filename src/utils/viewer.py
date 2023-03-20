@@ -1,3 +1,5 @@
+
+
 class Viewer:
 
     def view_device_scan_info(self, response):

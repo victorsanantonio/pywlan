@@ -1,6 +1,6 @@
-from src.execution.devicescanner_execution import deviceScannerExecution
-from src.execution.portscanner_execution import portScannerExecution
-from src.execution.arp_spoofer_execution import arpSpoofingExecution
+from src.execution.devicescanner_execution import device_scanner_execution
+from src.execution.portscanner_execution import port_scanner_execution
+from src.execution.arp_spoofer_execution import arp_spoofer_execution
 
 
 class Menu:
@@ -24,9 +24,9 @@ class Menu:
     
     def main_menu(self):
         options =  {
-            '1': ('Scan devices on WLAN', deviceScannerExecution.scan),
-            '2': ('Scan ports of an specific device', portScannerExecution.scan),
-            '3': ('ARP spoofing', arpSpoofingExecution.arp_spoofing),
+            '1': ('Scan devices on WLAN', device_scanner_execution.scan),
+            '2': ('Scan ports of an specific device', port_scanner_execution.scan),
+            '3': ('ARP spoofing', arp_spoofer_execution.spoof),
             '4': ('Exit', self.exit)
         }
         self.generate_menu(options, '4')

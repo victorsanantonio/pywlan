@@ -1,9 +1,9 @@
-from src.execution.requestor import requestor
-from src.utils.validator import validator, portScannerValidator
+from src.utils.requester import requester
+from src.utils.validator import validator, validator_execution
 from src.utils.formatter import formatter
 from src.utils.viewer import viewer
 from src.utils.exporter import exporter
-from src.controller.scanner import PortScanner
+from src.controller.controller import PortScanner
 
 
 class PortScannerExecution():
@@ -11,27 +11,27 @@ class PortScannerExecution():
     def scan(self):
         DATASET_NAME = "port-scan"
         try:
-            ip = requestor.request_ip()
-            portScannerValidator.valid_ip(ip)
+            ip = requester.request_ip()
+            validator_execution.validate_ip(ip)
 
-            startport = requestor.request_start_port()
-            portScannerValidator.valid_startport(startport)
+            startport = requester.request_start_port()
+            validator_execution.validate_port(startport)
 
-            endport = requestor.request_end_port()
-            portScannerValidator.valid_endport(endport)
+            endport = requester.request_end_port()
+            validator_execution.validate_port(endport)
 
-            portScannerValidator.compare_ports(endport, startport)
+            validator_execution.compare_ports(endport, startport)
 
-            portScanner = PortScanner(ip, int(startport), int(endport))
-            response = portScanner.scan()
+            port_scanner = PortScanner(ip, int(startport), int(endport))
+            response = port_scanner.scan()
             info = formatter.format_port_scan_response(response)
             viewer.view_port_scan_info(info)
 
-            export_confirmation = requestor.request_export_confirmation()
+            export_confirmation = requester.request_export_confirmation()
             confirmation = validator.valid_confirmation(export_confirmation)
             exporter.confirm_exportation(info, DATASET_NAME, confirmation)
 
         except Exception as exception:
             print(exception)
 
-portScannerExecution = PortScannerExecution()
+port_scanner_execution = PortScannerExecution()

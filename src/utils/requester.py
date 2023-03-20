@@ -1,6 +1,6 @@
 
 
-class Requestor:
+class Requester:
     def request_ip_range(self):
         return input("\nEnter an IP range. Example: [192.168.1.1/24]:\t")
 
@@ -13,7 +13,13 @@ class Requestor:
     def request_end_port(self):
         return input("\nEnter end port:\t")
 
+    def request_target_ip(self):
+        return input("\nEnter the target IP:\t")
+    
+    def request_gateway_ip(self):
+        return input("\nEnter the gateway IP:\t")
+    
     def request_export_confirmation(self):
         return input("\nDo you want to export the results? (Y/n):\t")
     
-requestor = Requestor()
+requester = Requester()

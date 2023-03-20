@@ -13,4 +13,7 @@ class Requestor:
     def request_end_port(self):
         return input("\nEnter end port:\t")
 
+    def request_export_confirmation(self):
+        return input("\nDo you want to export the results? (Y/n):\t")
+    
 requestor = Requestor()

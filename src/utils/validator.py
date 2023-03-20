@@ -29,6 +29,13 @@ class Validator:
         else:
             return False
     
+    def valid_confirmation(self, confirmation):
+        confirmation_casefold = confirmation.casefold()
+        if confirmation_casefold == "y" or confirmation_casefold =="yes":
+            return True
+        else:
+            return False
+        
 validator = Validator()
 
 class DeviceScannerValidator(Validator):

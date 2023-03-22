@@ -1,2 +1,2 @@
 # wlanvenom
-Python project which implements some utilities using the scapy module.
+Simple Python console application which includes some utilities using scapy module.

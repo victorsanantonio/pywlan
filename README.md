@@ -49,8 +49,7 @@ Este es el menú con el que podemos interaccionar con la aplicación.
 ![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
 
 #### 1. Escáner de dispositivos
-Pulsa la tecla 1 y ENTER para acceder al escáner de dispositivos:
-![image](https://user-images.githubusercontent.com/82669128/227252268-e090726b-f0ba-418f-a45a-7ab2246b5173.png)
+Pulsa la tecla 1 y ENTER para acceder al escáner de dispositivos.
 A continuación, solicitará que ingresemos un rango de IP:
 ![image](https://user-images.githubusercontent.com/82669128/227253167-486b50a1-2147-4ce4-8337-bea42b492ae8.png)
 > El rango de IPv4 que introduciremos, en mi caso será: `192.168.1.0/24`

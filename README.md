@@ -115,14 +115,14 @@ class ARPSpoofer(Scanner):
 Para representar más fácilmente los resultados de los escaneos, se ha decidido representar las clases `Client` y `Port` como clases modelo:
 ```python
 '''
-Dataclass cliente con atributos de su IP y su dirección MAC.
+Dataclass Cliente con atributos de su IP y su dirección MAC.
 '''
 class Client:
     ip: str
     mac: str
 
 '''
-Dataclass Puerto con atributos de su número y un booleano que indica si está abierto o cerrado
+Dataclass Puerto con atributos de su número y un booleano que indica si está abierto o cerrado.
 '''
 class Port:
     port: int

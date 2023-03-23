@@ -3,6 +3,7 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
 
 ## Índice
 - [Introducción](#id_introduccion)
+  - [Aclaraciones](#id_aclaraciones)
 - [Instalación (CLI)](#id_instalacion)
 - [Uso](#id_uso)
 - [Menú principal](#id_menu_principal)
@@ -17,7 +18,7 @@ Utilidades que incluye
 2. Escaneo de puertos (Scan ports of an specific device)
 3. Suplantación de ARP (ARP spoofing)
 <details>
-  <summary>Saber más</summary>
+  <summary>Saber más</summary><a name="id_aclaraciones"></a>
   
   ### Aclaraciones
   - Desde que me empecé a interesar por la __ciberseguridad__ mientras me formaba en __Python__, siempre había deseado crear mi propia aplicación con utilidades para este campo.

@@ -97,12 +97,14 @@ A continuación, nos solicitará una IP objetivo y una IP de entrada:
 
 Tablas de ARP del equipo víctima antes del ataque.
 ![image](https://user-images.githubusercontent.com/82669128/227280371-82fd08fa-4a31-428c-b6b3-bd93235d1bee.png)
+___Las direcciones físicas señaladas son distintas.___
 
 Comienzo del ataque:
 ![image](https://user-images.githubusercontent.com/82669128/227278030-2ffb6d80-f5e0-4e73-aef8-32edefea7d02.png)
 
 Tablas de ARP del equipo víctima durante el ataque.
 ![image](https://user-images.githubusercontent.com/82669128/227280503-46f4d554-946b-4425-98d6-5da029b2a389.png)
+___Las direcciones físicas indicadas son iguales.___
 
 > Para detener el ataque, introduce el comando Ctrl + C. Las tablas de ARP volverán a sus valores normales una vez finalizado.
 > ![image](https://user-images.githubusercontent.com/82669128/227278834-94d95cd4-fe3d-4615-b967-030c56764609.png)

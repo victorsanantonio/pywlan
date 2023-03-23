@@ -87,5 +87,17 @@ Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.
 Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.
 ### Ejemplos de uso<a name="id_ejemplos"></a>
 ```python
+'''
+Scanner es la clase padre.
+Comparte métodos que serán usados por las tres funcionalidades principales
+'''
 class Scanner
+
+'''
+Las siguientes clases heredan de Scanner.
+Esto es debido a que comparten varios métodos, evitando duplicidad de código.
+'''
+class DeviceScanner(Scanner)
+class PortScanner(Scanner)
+class ARPSpoofer(Scanner)
 ```

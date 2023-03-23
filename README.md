@@ -8,10 +8,10 @@ Utilidades que incluye
 3. Suplantación de ARP (ARP spoofing)
 <details>
   <summary>Saber más</summary>
-## Aclaraciones
-- Desde que me empecé a interesar por la _ciberseguridad_ mientras me formaba en _Python_, siempre había deseado crear mi propia aplicación con utilidades para este campo.
-- He decidido recopilar _tres sencillas utilidades_ en una única _aplicación_ de consola para así poder afianzar mi _proceso de aprendizaje_.
-- La aplicación consume, principalmente, métodos del módulo _scapy_. Muy útil y comúnmente empleado para la _manipulación de paquetes en red_.
+### Aclaraciones
+- Desde que me empecé a interesar por la __ciberseguridad__ mientras me formaba en __Python__, siempre había deseado crear mi propia aplicación con utilidades para este campo.
+- He decidido recopilar __tres sencillas utilidades__ en una única __aplicación__ de consola para así poder afianzar mi __proceso de aprendizaje__.
+- La aplicación consume, principalmente, métodos del módulo __scapy__. Muy útil y comúnmente empleado para la __manipulación de paquetes en red__.
 </details>
 
 ## Instalación (CLI)

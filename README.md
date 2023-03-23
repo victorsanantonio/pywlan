@@ -21,8 +21,8 @@ Utilidades que incluye
   ### Requerimientos técnicos
   Para instalar y ejecutar correctamente el proyecto, deberás tomar las siguientes consideraciones:
   1. Tener __Git__ instalado.
-  2. Sistema operativo __Windows__ con el driver [WinPcap](https://www.winpcap.org) versión __4.1.3__ instalado.
-  3. Tener __Python__ instalado.
+  2. Tener __Python 3__ instalado.
+  3. Sistema operativo __Windows__ con el driver [WinPcap](https://www.winpcap.org) versión __4.1.3__ instalado.
 </details>
 
 ## Instalación (CLI)
@@ -44,3 +44,6 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
+### Menú principal de la aplicación
+Este es el menú con el que podemos interaccionar con la aplicación.
+![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)

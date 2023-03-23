@@ -93,22 +93,26 @@ Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ co
 Scanner es la clase padre.
 Comparte métodos que serán usados por las tres funcionalidades principales
 '''
-class Scanner
-```
-```python
+class Scanner:
+  pass
+
+
 '''
 Las siguientes clases heredan de Scanner.
 Esto es debido a que comparten varios métodos, evitando duplicidad de código.
 '''
 class DeviceScanner(Scanner):
   pass
+
 class PortScanner(Scanner):
   pass
+
 class ARPSpoofer(Scanner):
   pass
 ```
+
 #### Dataclasses
-Para representar más fácilmente los resultados de los escaneos, se ha decidido representar las clases ´Client´ y ´Port´ como clases modelo:
+Para representar más fácilmente los resultados de los escaneos, se ha decidido representar las clases `Client` y `Port` como clases modelo:
 ```python
 '''
 Dataclass cliente con atributos de su IP y su dirección MAC.

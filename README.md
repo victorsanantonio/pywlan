@@ -3,7 +3,6 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
 
 ## Índice
 - [Introducción](#id_introduccion)
-  - [Aclaraciones](#id_aclaraciones)
 - [Instalación (CLI)](#id_instalacion)
 - [Uso](#id_uso)
 - [Menú principal](#id_menu_principal)
@@ -11,6 +10,8 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
   - [1. Escáner de dispositivos](#id_escaner_dispositivos)
     -[Exportado de datos](#id_exportado_datos)
   - [2. Escáner de puertos](#id_escaner_puertos)
+- [Paradigma](#id_paradigma)
+  - [Ejemplos](#id_ejemplos)
 
 ## Introducción<a name="id_introduccion"></a>
 Utilidades que incluye
@@ -18,7 +19,7 @@ Utilidades que incluye
 2. Escaneo de puertos (Scan ports of an specific device)
 3. Suplantación de ARP (ARP spoofing)
 <details>
-  <summary>Saber más</summary><a name="id_aclaraciones"></a>
+  <summary>Saber más</summary>
   
   ### Aclaraciones
   - Desde que me empecé a interesar por la __ciberseguridad__ mientras me formaba en __Python__, siempre había deseado crear mi propia aplicación con utilidades para este campo.
@@ -81,3 +82,10 @@ ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 ### 2. Escáner de puertos<a name="id_escaner_puertos"></a>
 Ahora que conocemos los dispositivos conectados a nuestra red...
 Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.
+
+## Paradigma<a name="id_paradigma"></a>
+Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.
+### Ejemplos de uso<a name="id_ejemplos"></a>
+```python
+class Scanner
+```

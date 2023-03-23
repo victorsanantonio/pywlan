@@ -4,6 +4,9 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
 ## Índice
 - [Introducción](#id_introduccion)
 - [Instalación (CLI)](#id_instalacion)
+- [Uso](#id_uso)
+- [Menú principal](#id_menu_principal)
+- [Funcionalidades](#id_funcionalidades)
 
 ## Introducción<a name="id_introduccion"></a>
 Utilidades que incluye
@@ -43,19 +46,19 @@ cd wlanvenom/
 pip install -r requirements.txt
 ```
 
-## Uso
+## Uso<a name="id_uso"></a>
 - Una vez estés en la raíz del proyecto, ejecuta el siguiente comando.
 ```sh
 python main.py
 ```
-## Menú principal de la aplicación
+## Menú principal<a name="id_menu_principal"></a>
 Este es el menú con el que podemos interaccionar con la aplicación.
 <details>
   <summary>Ver imagen</summary>
   - ![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
 </details>
 
-## Funcionalidades
+## Funcionalidades<a name="id_funcionalidades"></a>
 ### 1. Escáner de dispositivos
 Pulsa la tecla 1 y ENTER para acceder al escáner de dispositivos.
 A continuación, solicitará que ingresemos un rango de IP:

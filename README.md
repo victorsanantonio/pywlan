@@ -7,9 +7,9 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
 - [Uso](#id_uso)
 - [Menú principal](#id_menu_principal)
 - [Funcionalidades](#id_funcionalidades)
-  - [Escáner de dispositivos](#id_escaner_dispositivos)
-  - [Exportado de datos](#id_exportado_datos)
-  - [Escáner de puertos](#id_escaner_puertos)
+  - [1. Escáner de dispositivos](#id_escaner_dispositivos)
+    -[Exportado de datos](#id_exportado_datos)
+  - [2. Escáner de puertos](#id_escaner_puertos)
 
 ## Introducción<a name="id_introduccion"></a>
 Utilidades que incluye

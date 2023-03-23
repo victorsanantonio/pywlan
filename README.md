@@ -92,12 +92,16 @@ Scanner es la clase padre.
 Comparte métodos que serán usados por las tres funcionalidades principales
 '''
 class Scanner
-
+```
+```python
 '''
 Las siguientes clases heredan de Scanner.
 Esto es debido a que comparten varios métodos, evitando duplicidad de código.
 '''
-class DeviceScanner(Scanner)
-class PortScanner(Scanner)
-class ARPSpoofer(Scanner)
+class DeviceScanner(Scanner):
+  pass
+class PortScanner(Scanner):
+  pass
+class ARPSpoofer(Scanner):
+  pass
 ```

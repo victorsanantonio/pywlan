@@ -86,7 +86,8 @@ Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.
 
 ## Paradigma<a name="id_paradigma"></a>
 Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.
-### Ejemplos de uso<a name="id_ejemplos"></a>
+### Ejemplos<a name="id_ejemplos"></a>
+#### Clases y herencia
 ```python
 '''
 Scanner es la clase padre.
@@ -105,4 +106,21 @@ class PortScanner(Scanner):
   pass
 class ARPSpoofer(Scanner):
   pass
+```
+#### Dataclasses
+Para representar más fácilmente los resultados de los escaneos, se ha decidido representar las clases ´Client´ y ´Port´ como clases modelo:
+```python
+'''
+Dataclass cliente con atributos de su IP y su dirección MAC.
+'''
+class Client:
+    ip: str
+    mac: str
+
+'''
+Dataclass Puerto con atributos de su número y un booleano que indica si está abierto o cerrado
+'''
+class Port:
+    port: int
+    is_opened: bool
 ```

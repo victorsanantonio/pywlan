@@ -111,6 +111,8 @@ ___Las direcciones físicas indicadas son iguales.___
 > ![image](https://user-images.githubusercontent.com/82669128/227278834-94d95cd4-fe3d-4615-b967-030c56764609.png)
 
 ### 4. Salir<a name="id_salir"></a>
+Pulsa la tecla 4 y ENTER para detener la ejecución de la aplicación.
+
 ## Paradigma<a name="id_paradigma"></a>
 Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.
 ### Ejemplos<a name="id_ejemplos"></a>

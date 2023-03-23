@@ -10,6 +10,7 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
   - [1. Escáner de dispositivos](#id_escaner_dispositivos)
     -[Exportado de datos](#id_exportado_datos)
   - [2. Escáner de puertos](#id_escaner_puertos)
+  - [3. Suplantación de ARP](#id_suplantacion_arp)
 - [Paradigma](#id_paradigma)
   - [Ejemplos](#id_ejemplos)
 
@@ -83,6 +84,28 @@ ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 ### 2. Escáner de puertos<a name="id_escaner_puertos"></a>
 Ahora que conocemos los dispositivos conectados a nuestra red...
 Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.
+
+A continuación, solicitará que ingresemos una IP, puerto de comienzo y puerto de fin.
+![image](https://user-images.githubusercontent.com/82669128/227275624-e077d3d3-2af0-47f9-984c-8e7e7dca4a5b.png)
+___Nos mostrará un resultado en el que visualizaremos el número de puerto y si está abierto o cerrado.___
+
+### 3. Suplantación de ARP<a name="id_suplantacion_arp"></a>
+Pulsa la tecla 3 y ENTER para acceder a la suplantación de ARP.
+
+A continuación, nos solicitará una IP objetivo y una IP de entrada:
+![image](https://user-images.githubusercontent.com/82669128/227277859-b3329ae4-884f-416b-94e4-1801182caa19.png)
+
+Tablas de ARP del equipo víctima antes del ataque.
+![image](https://user-images.githubusercontent.com/82669128/227280371-82fd08fa-4a31-428c-b6b3-bd93235d1bee.png)
+
+Comienzo del ataque:
+![image](https://user-images.githubusercontent.com/82669128/227278030-2ffb6d80-f5e0-4e73-aef8-32edefea7d02.png)
+
+Tablas de ARP del equipo víctima durante el ataque.
+![image](https://user-images.githubusercontent.com/82669128/227280503-46f4d554-946b-4425-98d6-5da029b2a389.png)
+
+> Para detener el ataque, introduce el comando Ctrl + C. Las tablas de ARP volverán a sus valores normales una vez finalizado.
+> ![image](https://user-images.githubusercontent.com/82669128/227278834-94d95cd4-fe3d-4615-b967-030c56764609.png)
 
 ## Paradigma<a name="id_paradigma"></a>
 Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.

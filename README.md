@@ -8,7 +8,11 @@ Utilidades que incluye
 3. Suplantación de ARP (ARP spoofing)
 <details>
   <summary>Saber más</summary>
-  ### Aclaraciones
+  ### Heading
+  1. Foo
+  2. Bar
+     * Baz
+     * Qux
   
 </details>
 

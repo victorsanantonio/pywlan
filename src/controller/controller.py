@@ -60,7 +60,7 @@ class DeviceScanner(Scanner):
 class PortScanner(Scanner):
 
     def __init__(self, ip, startport, endport):
-        super().__init__(timeout = 2)
+        super().__init__(timeout = 0.5)
         self.ip = ip
         self.startport = startport
         self.endport = endport

@@ -26,7 +26,5 @@ class Formatter:
             }
             ports_info.append(port_info)
         return ports_info
-    
-    #TODO methods for all the utils, arp spoofing etc...
 
 formatter = Formatter()

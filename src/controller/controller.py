@@ -12,7 +12,7 @@ class Scanner:
         if op!=None and mac!=None and gateway!=None:
             return scapy.ARP(op=op, pdst=ip, hwdst=mac, psrc=gateway)
         elif op!=None and mac!=None and gateway_mac!=None:
-            scapy.ARP(op=op, pdst=ip, hwdst=mac, psrc=gateway, hwsrc=gateway_mac)
+            return scapy.ARP(op=op, pdst=ip, hwdst=mac, psrc=gateway, hwsrc=gateway_mac)
         else:
             return scapy.ARP(pdst=ip)
     
@@ -60,7 +60,7 @@ class DeviceScanner(Scanner):
 class PortScanner(Scanner):
 
     def __init__(self, ip, startport, endport):
-        super().__init__(timeout = 0.5)
+        super().__init__(timeout = 2)
         self.ip = ip
         self.startport = startport
         self.endport = endport
@@ -82,7 +82,7 @@ class PortScanner(Scanner):
 class ARPSpoofer(Scanner):
 
     def __init__(self):
-        super().__init__(timeout = 1)
+        super().__init__(timeout = 5)
         self.mac = "ff:ff:ff:ff:ff:ff"
         self.op = 2
     
@@ -93,12 +93,11 @@ class ARPSpoofer(Scanner):
     
     def spoof(self, target_ip, spoof_ip):
         target_mac = self.get_mac_address(target_ip)
-        packet = super().get_arp(self.op, target_ip, target_mac, spoof_ip)
+        packet = super().get_arp(target_ip, self.op, target_mac, spoof_ip)
         super().send_packet(packet)
     
     def undo_spoof(self, target_ip, gateway_ip):
         target_mac = self.get_mac_address(target_ip)
         gateway_mac = self.get_mac_address(gateway_ip)
-
-        packet = super().get_arp(self.op, target_ip, target_mac, gateway_ip, gateway_mac)
-        super().send_packet(packet, 4)
+        packet = super().get_arp(target_ip, self.op, target_mac, gateway_ip, gateway_mac)
+        super().send_packet(packet)

@@ -48,7 +48,7 @@ python main.py
 Este es el menú con el que podemos interaccionar con la aplicación.
 <details>
   <summary>Ver imagen</summary>
-  ![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
+  - ![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
 </details>
 
 ## Funcionalidades

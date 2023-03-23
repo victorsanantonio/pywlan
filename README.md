@@ -7,6 +7,9 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
 - [Uso](#id_uso)
 - [Menú principal](#id_menu_principal)
 - [Funcionalidades](#id_funcionalidades)
+  - [Escáner de dispositivos](#id_escaner_dispositivos)
+    -[Exportado de datos](#id_exportado_datos)
+  - [Escáner de puertos](#id_escaner_puertos)
 
 ## Introducción<a name="id_introduccion"></a>
 Utilidades que incluye
@@ -53,13 +56,10 @@ python main.py
 ```
 ## Menú principal<a name="id_menu_principal"></a>
 Este es el menú con el que podemos interaccionar con la aplicación.
-<details>
-  <summary>Ver imagen</summary>
-  - ![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
-</details>
+![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
 
 ## Funcionalidades<a name="id_funcionalidades"></a>
-### 1. Escáner de dispositivos
+### 1. Escáner de dispositivos<a name="id_device_scanner"></a>
 Pulsa la tecla 1 y ENTER para acceder al escáner de dispositivos.
 A continuación, solicitará que ingresemos un rango de IP:
 ![image](https://user-images.githubusercontent.com/82669128/227253167-486b50a1-2147-4ce4-8337-bea42b492ae8.png)
@@ -71,7 +71,7 @@ Estos son los dispositivos conectados a mi red:
 ![image](https://user-images.githubusercontent.com/82669128/227255695-d0c6750c-e034-4223-ab65-71112d53b43a.png)
 ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 
-#### Exportado de datos
+#### Exportado de datos<a name="id_exportado_datos"></a>
 > Nota: Si deseas exportar los resultados, introduce la palabra `Yes` o la letra `Y`:
 > ![image](https://user-images.githubusercontent.com/82669128/227256716-964a378f-99f3-490e-b687-adfa283087d2.png)
 > ![image](https://user-images.githubusercontent.com/82669128/227258999-1d421925-4779-4e77-92c2-3abcfa7035fb.png)
@@ -79,6 +79,6 @@ ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 Se generará un directorio `data/` en la raíz del proyecto con un archivo CSV con el nombre mostrado anteriormente.
 Esto funcionará de igual manera para la utilidad de escaneo de puertos.
 
-### 2. Escáner de puertos
+### 2. Escáner de puertos<a name="id_escaner_puertos"></a>
 Ahora que conocemos los dispositivos conectados a nuestra red...
 Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.

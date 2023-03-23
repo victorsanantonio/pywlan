@@ -19,10 +19,10 @@ Utilidades que incluye
   <summary>Requerimientos</summary>
   
   ### Requerimientos técnicos
-  - Para instalar y ejecutar correctamente el proyecto, deberás tomar las siguientes consideraciones:
-    1. Tener __Git__ instalado.
-    2. Sistema operativo __Windows__ con el driver [WinPcap](https://www.winpcap.org) versión __4.1.3__ instalado.
-    3. Tener __Python__ instalado.
+  Para instalar y ejecutar correctamente el proyecto, deberás tomar las siguientes consideraciones:
+  1. Tener __Git__ instalado.
+  2. Sistema operativo __Windows__ con el driver [WinPcap](https://www.winpcap.org) versión __4.1.3__ instalado.
+  3. Tener __Python__ instalado.
 </details>
 
 ## Instalación (CLI)

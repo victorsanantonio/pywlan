@@ -11,6 +11,7 @@ Aplicación de consola escrita en Python la cual incluye algunas utilidades empl
     -[Exportado de datos](#id_exportado_datos)
   - [2. Escáner de puertos](#id_escaner_puertos)
   - [3. Suplantación de ARP](#id_suplantacion_arp)
+  - [4. Salir](#id_salir)
 - [Paradigma](#id_paradigma)
   - [Ejemplos](#id_ejemplos)
 
@@ -109,6 +110,7 @@ ___Las direcciones físicas indicadas son iguales.___
 > Para detener el ataque, introduce el comando Ctrl + C. Las tablas de ARP volverán a sus valores normales una vez finalizado.
 > ![image](https://user-images.githubusercontent.com/82669128/227278834-94d95cd4-fe3d-4615-b967-030c56764609.png)
 
+### 4. Salir<a name="id_salir"></a>
 ## Paradigma<a name="id_paradigma"></a>
 Se hace uso principalmente del __paradigma__ de la __orientación a objetos__ con aplicaciones prácticas de __herencia__. Así como la implementación de __dataclasses__.
 ### Ejemplos<a name="id_ejemplos"></a>

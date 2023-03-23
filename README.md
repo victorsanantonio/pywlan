@@ -60,8 +60,13 @@ Estos son los dispositivos conectados a mi red:
 ![image](https://user-images.githubusercontent.com/82669128/227255695-d0c6750c-e034-4223-ab65-71112d53b43a.png)
 ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 
+##### Exportado de datos
 > Nota: Si deseas exportar los resultados, introduce la palabra `Yes` o la letra `Y`:
 > ![image](https://user-images.githubusercontent.com/82669128/227256716-964a378f-99f3-490e-b687-adfa283087d2.png)
+> ![image](https://user-images.githubusercontent.com/82669128/227258999-1d421925-4779-4e77-92c2-3abcfa7035fb.png)
+
+Se generará un directorio `data/` en la raíz del proyecto con un archivo CSV con el nombre mostrado anteriormente.
+Esto funcionará de igual manera para la utilidad de escaneo de puertos.
 
 #### 2. Escáner de puertos
 Ahora que conocemos los dispositivos conectados a nuestra red...

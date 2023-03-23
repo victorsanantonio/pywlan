@@ -76,6 +76,7 @@ ___Como se puede apreciar, conocemos su IP privada y su dirección de MAC.___
 ### Exportado de datos<a name="id_exportado_datos"></a>
 > Nota: Si deseas exportar los resultados, introduce la palabra `Yes` o la letra `Y`:
 > ![image](https://user-images.githubusercontent.com/82669128/227256716-964a378f-99f3-490e-b687-adfa283087d2.png)
+
 > Se generará un directorio `data/` en la raíz del proyecto con un archivo CSV.
 > Esto funcionará de igual manera para la utilidad de escaneo de puertos.
 

@@ -1,4 +1,5 @@
 import scapy.all as scapy
+import socket
 from src.models.client import Client
 from src.models.port import Port
 
@@ -57,25 +58,24 @@ class DeviceScanner(Scanner):
         return clients
 
 
-class PortScanner(Scanner):
+class PortScanner():
 
     def __init__(self, ip, startport, endport):
-        super().__init__(timeout = 2)
         self.ip = ip
         self.startport = startport
         self.endport = endport
     
     def scan(self):
         print("[+] Scanning ports...")
-        ports = []
+        ports=[]
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         for port in range(self.startport, self.endport+1):
-            packet = super().create_srp1_packet(super().get_ip(self.ip), super().get_tcp(port, 'S'))
-            response = super().send_srp1_packet(packet, self.timeout)
-            if response == None:
-                ports.append(Port(port, False))
-            elif response.haslayer(scapy.TCP) and response.getlayer(scapy.TCP).flags==0x12:
+            try:
+                s.connect((self.ip, port))
                 ports.append(Port(port, True))
-        
+            except:
+                ports.append(Port(port, False))
+                    
         return ports
 
 

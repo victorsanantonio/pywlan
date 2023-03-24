@@ -89,10 +89,11 @@ Pulsa la tecla 2 y ENTER para acceder al escáner de puertos.
 A continuación, solicitará que ingresemos una IP, puerto de comienzo y puerto de fin.
 ![image](https://user-images.githubusercontent.com/82669128/227275624-e077d3d3-2af0-47f9-984c-8e7e7dca4a5b.png)
 
-___Nos mostrará un resultado en el que visualizaremos el número de puerto y si está abierto o cerrado.___
+Finalizado el escaneo:
 ![image](https://user-images.githubusercontent.com/82669128/227478308-fc2890c4-49c5-40a2-b79e-c6e83a665e9e.png)
+___Nos muestra un resultado en el que visualizaremos el número de puerto y si está abierto o cerrado.___
 
-> Nota: Para esta implementación se utiliza el módulo __socket__ debido a las dificultades y problemas encontrados.
+> Nota: Para esta implementación se utiliza el módulo __socket__ debido a dificultades y problemas encontrados con la implementación en scapy.
 
 ### 3. Suplantación de ARP<a name="id_suplantacion_arp"></a>
 Pulsa la tecla 3 y ENTER para acceder a la suplantación de ARP.

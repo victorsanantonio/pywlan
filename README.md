@@ -46,7 +46,15 @@ git clone https://github.com/victorsanantonio/pywlan.git
 ```
 - Posicionarse en la raíz del proyecto
 ```sh
-cd pywlan/
+cd .\pywlan
+```
+- Crear entorno virual
+```sh
+python -m virtualenv venv
+```
+- Activar entorno virtual
+```sh
+.\venv\Scripts\activate
 ```
 - Instalar dependencias
 ```sh

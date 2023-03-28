@@ -1,4 +1,4 @@
-# wlanvenom
+# pylan
 Aplicación de consola escrita en Python la cual incluye algunas utilidades empleando los módulos scapy y socket.
 
 ## Índice

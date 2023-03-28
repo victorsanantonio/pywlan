@@ -1,4 +1,4 @@
-# pylan
+# pywlan
 Aplicación de consola escrita en Python la cual incluye algunas utilidades empleando los módulos scapy y socket.
 
 ## Índice
@@ -42,11 +42,11 @@ Utilidades que incluye
 ## Instalación (CLI)<a name="id_instalacion"></a>
 - Descargar repositorio
 ```sh
-git clone https://github.com/victorsanantonio/wlanvenom.git
+git clone https://github.com/victorsanantonio/pywlan.git
 ```
 - Posicionarse en la raíz del proyecto
 ```sh
-cd wlanvenom/
+cd pywlan/
 ```
 - Instalar dependencias
 ```sh
@@ -60,7 +60,7 @@ python main.py
 ```
 ## Menú principal<a name="id_menu_principal"></a>
 Este es el menú con el que podemos interaccionar con la aplicación.
-![image](https://user-images.githubusercontent.com/82669128/227251047-aa060e20-b8a3-4dd2-8900-eb0463e295d3.png)
+![image](https://user-images.githubusercontent.com/82669128/228294170-e0dcb593-4372-4d7d-aa4e-2e5b73bbd6ec.png)
 
 ## Funcionalidades<a name="id_funcionalidades"></a>
 ### 1. Escáner de dispositivos<a name="id_escaner_dispositivos"></a>
